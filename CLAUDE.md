@@ -52,6 +52,28 @@ Neutral greys are alpha tints of Ink Black (`rgba(17,24,39,…)` on light, `rgba
 - Inline styles / self-contained CSS; hit targets ≥44px; reserve scrollbar space (`scrollbar-gutter: stable`) where a fixed edge element could jump.
 - Responsive: collapse multi-column grids to one column and simplify chrome on small screens.
 
+## Change Management & Versioning
+
+### Archiving Changes
+All changes to the website must be archived in the `/archived` folder at the root of the repo. Archive files must follow this naming convention:
+
+**Format:** `yymmdd-hhmm_description.html`  
+**Example:** `250705-1430_hero-animation-update.html`
+
+- Use 24-hour time format (hhmm)
+- Include a brief description of what changed
+- Archive the previous version BEFORE deploying the new version
+
+### Changes Log
+Maintain `changes.md` in the root of the repo. Document all changes with:
+- **Version/Date:** Point revision (e.g., 1.0, 1.1, 1.2)
+- **Date & Time:** ISO format (YYYY-MM-DD HH:MM)
+- **Description:** Clear, concise description of changes
+- **Archived File:** Name of the archived version (if applicable)
+- **Rollback:** Instructions to revert if needed
+
+See `changes.md` for the template and current log.
+
 ## Notes
 - Marketing site form is front-end only in prototypes — real deployments must wire submissions to a backend/CRM.
 - The developer one-pager (tech stack, AWUs, hiring) is internal/recruiting — keep it OFF client-facing marketing material.
