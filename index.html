@@ -579,7 +579,7 @@ html, body {
           <p class="form-ey">Get in touch</p>
           <h2 class="form-h">Interested? Get in touch.</h2>
           <p class="form-sub">If you'd like to find out more about cadeom, leave your details and we'll be in touch.</p>
-          <form class="reg-form" id="regForm" novalidate>
+          <form class="reg-form" id="regForm" action="https://formspree.io/f/xvzjlrla" method="POST" novalidate>
             <div class="row2">
               <div class="field">
                 <label for="fn">Full name</label>
@@ -800,8 +800,27 @@ html, body {
         document.getElementById('regForm').addEventListener('submit', function (e) {
           e.preventDefault();
           if (!this.checkValidity()) { this.reportValidity(); return; }
-          this.style.display = 'none';
-          document.getElementById('formOk').classList.add('on');
+
+          var formData = new FormData(this);
+          var action = this.getAttribute('action');
+
+          fetch(action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          })
+          .then(function (response) {
+            if (response.ok) {
+              document.getElementById('regForm').style.display = 'none';
+              document.getElementById('formOk').classList.add('on');
+            } else {
+              alert('There was a problem submitting your form. Please try again.');
+            }
+          })
+          .catch(function (error) {
+            console.error('Form submission error:', error);
+            alert('There was a problem submitting your form. Please try again.');
+          });
         });
 
       });
