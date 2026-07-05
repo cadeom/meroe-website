@@ -4,16 +4,28 @@ All changes are tracked with point revisions and timestamped archives for easy r
 
 ---
 
-## Current Version: 1.1
+## Current Version: 1.2
 
 | Version | Date | Time | Description | Archived File | Rollback |
 |---------|------|------|-------------|---------------|----------|
+| 1.2 | 2026-07-05 | 20:47 | Reworded screen 2 stat: label to "of project value", sub to "is typically lost to rework, much of it traceable to errors that better reviews could have caught." Big-number layout unchanged; source line retained | `260705-2047_pre-stat-copy-update.html` | Copy archived file over index.html |
 | 1.1 | 2026-07-05 | 18:52 | Copy fix (whom by); Formspree lead capture; fixed screen 3 scroll and screen 2 header clipping on mobile/tablet | `260705-1852_pre-scroll-fix.html` | Copy archived file over index.html |
 | 1.0 | 2026-07-05 | 14:30 | Initial release: standalone landing page with typewriter hero, 4-screen deck, responsive design | — | N/A (initial) |
 
 ---
 
 ## Version History
+
+### 1.2 — Screen 2 Stat Rewording
+**Date:** 2026-07-05 20:47
+**Description:**
+- Changed stat label from "total project value" to "of project value"
+- Changed stat sub from "is lost to rework that should have been caught in review." to "is typically lost to rework, much of it traceable to errors that better reviews could have caught."
+- Big-number "5–15%" treatment kept as the visual anchor; source citation retained
+- Corrected typo ("typpically") and grammar ("errors that better reviews could be caught") from the requested copy
+
+**Files Changed:** `index.html`
+**Archived:** `archived/260705-2047_pre-stat-copy-update.html`
 
 ### 1.1 — Lead Capture + Mobile Scroll Fixes
 **Date:** 2026-07-05 18:52
